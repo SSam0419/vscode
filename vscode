@@ -57,8 +57,8 @@
   "editor.cursorWidth": 2,
   "editor.cursorBlinking": "solid",
   "go.toolsManagement.autoUpdate": true,
-  "editor.fontSize": 16,
-  "terminal.integrated.fontSize": 16,
+  "editor.fontSize": 18,
+  "terminal.integrated.fontSize": 18,
   "editor.minimap.sectionHeaderFontSize": 8,
   "explorer.confirmPasteNative": false,
   "notebook.confirmDeleteRunningCell": false,
@@ -70,22 +70,11 @@
   "editor.fontFamily": "FantasqueSansM Nerd Font, Iosevka Nerd Font, Geist Mono, CaskaydiaMono Nerd Font, BlexMono Nerd Font, JetBrainsMono Nerd Font, Agave Nerd Font, AnonymousPro Nerd Font, FiraCode Nerd Font, ZedMono Nerd Font,  monospace",
   "workbench.navigationControl.enabled": false,
   "window.commandCenter": false,
-  "chat.commandCenter.enabled": false,
   "vim.smartRelativeLine": true,
   "todohighlight.keywords": ["TODO", "FIXME", "BUG", "NOTE", "HACK"],
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifier": "non-relative",
-  "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.fontAliasing": "antialiased",
-  "catppuccin-noctis-icons.hidesExplorerArrows": false,
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false,
-    "go": true,
-    "vue": true
-  },
   "importCost.fontStyle": "italic",
   "window.confirmSaveUntitledWorkspace": false,
   "security.workspace.trust.untrustedFiles": "open",
@@ -93,26 +82,48 @@
   "workbench.iconTheme": "Monokai Pro (Filter Octagon) Icons",
   "cursor.cpp.disabledLanguages": ["plaintext", "markdown", "scminput"],
   "workbench.layoutControl.enabled": false,
-  "workbench.colorTheme": "Best Themes - Zenith",
-  "workbench.statusBar.visible": false,
+  "workbench.colorTheme": "Catppuccin Mocha",
   "custom-ui-style.stylesheet": {
-    "* ": "font-family: FantasqueSansM Nerd Font, Iosevka Nerd Font, Geist Mono, CaskaydiaMono Nerd Font, BlexMono Nerd Font, JetBrainsMono Nerd Font, Agave Nerd Font, AnonymousPro Nerd Font, FiraCode Nerd Font, ZedMono Nerd Font, monospace !important",
-    "body": "font-family: FantasqueSansM Nerd Font, Iosevka Nerd Font, Geist Mono, CaskaydiaMono Nerd Font, BlexMono Nerd Font, JetBrainsMono Nerd Font, Agave Nerd Font, AnonymousPro Nerd Font, FiraCode Nerd Font, ZedMono Nerd Font, monospace !important",
-    ".monaco-workbench": "font-family: FantasqueSansM Nerd Font, Iosevka Nerd Font, Geist Mono, CaskaydiaMono Nerd Font, BlexMono Nerd Font, JetBrainsMono Nerd Font, Agave Nerd Font, AnonymousPro Nerd Font, FiraCode Nerd Font, ZedMono Nerd Font, monospace !important",
-    ".monaco-workbench *": "font-family: inherit !important",
-    ".part *": "font-family: inherit !important",
-    ".monaco-list *": "font-family: inherit !important",
-    ".monaco-tree *": "font-family: inherit !important",
-    ".quick-input-widget *": "font-family: inherit !important",
-    ".monaco-menu *": "font-family: inherit !important",
-    ".monaco-action-bar *": "font-family: inherit !important",
-    ".tabs-container *": "font-family: inherit !important",
-    ".monaco-breadcrumbs *": "font-family: inherit !important",
-    ".notifications-toasts *": "font-family: inherit !important",
+    // font family stuff
+    // "* ": "font-family: Geist Mono, JetBrainsMono Nerd Font,  FantasqueSansM Nerd Font, Iosevka Nerd Font,  CaskaydiaMono Nerd Font, BlexMono Nerd Font,  Agave Nerd Font, AnonymousPro Nerd Font, FiraCode Nerd Font, ZedMono Nerd Font, monospace !important",
+    // "body": "font-family: Geist Mono, JetBrainsMono Nerd Font,  FantasqueSansM Nerd Font, Iosevka Nerd Font,  CaskaydiaMono Nerd Font, BlexMono Nerd Font,  Agave Nerd Font, AnonymousPro Nerd Font, FiraCode Nerd Font, ZedMono Nerd Font, monospace !important",
+    // ".monaco-workbench": "font-family: Geist Mono, JetBrainsMono Nerd Font,  FantasqueSansM Nerd Font, Iosevka Nerd Font,  CaskaydiaMono Nerd Font, BlexMono Nerd Font,  Agave Nerd Font, AnonymousPro Nerd Font, FiraCode Nerd Font, ZedMono Nerd Font, monospace !important",
+    // ".monaco-workbench *": "font-family: inherit !important",
+    // ".part *": "font-family: inherit !important",
+    // ".monaco-list *": "font-family: inherit !important",
+    // ".monaco-tree *": "font-family: inherit !important",
+    // ".quick-input-widget *": "font-family: inherit !important",
+    // ".monaco-menu *": "font-family: inherit !important",
+    // ".monaco-action-bar *": "font-family: inherit !important",
+    // ".tabs-container *": "font-family: inherit !important",
+    // ".monaco-breadcrumbs *": "font-family: inherit !important",
+    // ".notifications-toasts *": "font-family: inherit !important",
 
     // blurry command platte
     ".quick-input-widget": "top: 25vh !important;",
     ".quick-input-widget::before": "content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; backdrop-filter: blur(8px) saturate(0.1); background: rgba(0, 0, 0, 0.2); z-index: -1; pointer-events: none",
-    ".quick-input-header": "background: var(--vscode-quickInput-background);"
-  }
+    ".quick-input-header": "background: var(--vscode-quickInput-background);",
+
+
+     // Vim mode indicator styling
+    // ".statusbar-item[id*='vscodevim']": "border-radius: 4px !important; font-weight: bold !important; position: fixed !important; top: 20px !important; right: 20px !important; z-index: 9999 !important; background: rgba(255, 255, 255, 0.15) !important; backdrop-filter: blur(20px) saturate(1.8) !important; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important; max-height: 40px"
+    // Different colors for different modes
+    // ".statusbar-item[id*='vscodevim'][title*='Normal']": "background: #007acc !important;",
+    // ".statusbar-item[id*='vscodevim'][title*='Insert']": "background: #28a745 !important;",
+    // ".statusbar-item[id*='vscodevim'][title*='Visual']": "background: #ffc107 !important; color: black !important;",
+    // ".statusbar-item[id*='vscodevim'][title*='Command']": "background: #dc3545 !important;",
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    }
+  ],
+  "vim.useSystemClipboard": true,
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.insert": "block",
+  "vim.cursorStylePerMode.visual": "block",
+  "vim.cursorStylePerMode.visualline": "block",
+  "vim.cursorStylePerMode.visualblock": "block",
+  "vim.cursorStylePerMode.replace": "block",
 }
